@@ -1,0 +1,66 @@
+.news_section {
+  background-image: url(../../../asets/Strokenew.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.news_headline {
+  height: 300px;
+  width: 50%;
+  display: table;
+  text-align: right;
+  h1 {
+    padding-right: 50px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.news_description {
+  padding: auto;
+  width: 50%;
+  div {
+    width: 70%;
+    margin-top: 50px;
+    padding-left: 25px;
+    text-align: justify;
+
+    button {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media screen and(max-width:1067px) {
+  .news_description {
+    div {
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+  }
+}
+@media screen and(max-width:838px) {
+  .news_description {
+    div {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and(max-width: 835px) {
+  .news_headline {
+    width: 100%;
+  }
+  .news_description {
+    width: 100%;
+    div {
+      margin: 0 auto;
+      padding-bottom: 20px;
+    }
+  }
+}
+@media screen and(max-width:500px) {
+  .news_headline {
+    height: auto;
+  }
+}

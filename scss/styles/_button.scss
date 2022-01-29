@@ -1,0 +1,36 @@
+//buttons wariations
+@each $key, $val in $colors {
+  @if ($key == primary_background or $key == secondary_background) {
+    .btn_background_#{$key} {
+      text-transform: uppercase;
+      font-weight: 700;
+      text-align: center;
+      font-family: $paragraph_font_family;
+      background: transparent;
+      width: 250px;
+      padding: $main_padding;
+      border-radius: $main_border_radius;
+      border-style: solid;
+      border-width: $main_border_tickness;
+      min-width: 150px;
+      @if ($key == primary_background) {
+        color: $main_purple_color;
+        border-color: $main_purple_color;
+        border-top: $main_purple_color;
+        border-left: $main_purple_color;
+        &:hover {
+          background-color: darken($main_background_color, 4);
+        }
+      }
+      @if ($key == secondary_background) {
+        color: $main_background_color;
+        border-color: $main_background_color;
+        border-top: $main_background_color;
+        border-left: $main_background_color;
+        &:hover {
+          background-color: darken($main_purple_background, $amount: 4);
+        }
+      }
+    }
+  }
+}

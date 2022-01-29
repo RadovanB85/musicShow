@@ -1,0 +1,50 @@
+.seventh_container {
+  .seventh_img,
+  .seventh_text {
+    height: 900px;
+    width: 50%;
+  }
+}
+
+.seventh_img {
+  background: url(../../../asets/ticketImg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%);
+}
+
+.seventh_text {
+  background-image: url(../../../asets/arrowPartyHart.png),
+    url(../../../asets/arrowParty3.png), url(../../../asets/arrowParty2.png),
+    url(../../../asets/partyHartPinkBackground.png);
+  background-repeat: no-repeat;
+  background-position: 15% 15%, 35% 10%, 85% 90%;
+  background-size: 10% 10%, 15% 15%, 20% 20%, 100% 110%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  font-weight: bold;
+  text-align: center;
+  width: 470px;
+}
+
+@media screen and(max-width:835px) {
+  .seventh_container {
+    .seventh_img,
+    .seventh_text {
+      height: 900px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and(max-width:590px) {
+  .wrapper {
+    width: 100%;
+  }
+}

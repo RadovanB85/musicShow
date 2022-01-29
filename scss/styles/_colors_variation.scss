@@ -1,0 +1,55 @@
+// main headlines colors variations
+@each $key, $val in $colors {
+  @if ($key == primary_background or $key == secondary_background) {
+    .main_headline_background_#{$key} {
+      font-family: $headlines_font_familiy;
+      font-size: $main_header_size;
+      text-transform: uppercase;
+      color: black;
+      span {
+        @if ($key == primary_background) {
+          color: $main_purple_background;
+        }
+        @if ($key == secondary_background) {
+          color: $main_background_color;
+        }
+      }
+    }
+  }
+}
+
+// main text colors variations
+@each $key, $val in $colors {
+  @if ($key == primary_background or $key == secondary_background) {
+    .main_text_background_#{$key} {
+      h2:first-child {
+        position: relative;
+        width: fit-content;
+        margin: auto;
+        background-color: black;
+        transform: rotate(-3deg);
+        left: -10%;
+        margin: 10px;
+      }
+      h2:nth-child(even) {
+        position: relative;
+        width: fit-content;
+        margin: auto;
+        background-color: $main_purple_color;
+        transform: rotate(-2deg);
+        left: -10%;
+      }
+      p {
+        span {
+          font-size: 110%;
+          @if ($key == primary_background) {
+            color: $main_purple_color;
+          }
+          @if ($key == secondary_background) {
+            color: $main_background_color;
+          }
+        }
+      }
+    }
+  }
+}

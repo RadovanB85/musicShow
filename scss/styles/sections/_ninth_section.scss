@@ -1,0 +1,53 @@
+.nineth_input_holder,
+.ninth_image {
+  height: 900px;
+  width: 50%;
+}
+
+.nineth_input_holder {
+  background: url(../../../asets/newsLetterPurpleBackground.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.ninth_image {
+  background: url(../../../asets/newsLetterImg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+}
+
+.ninth_wrapper {
+  width: 60%;
+  height: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    text-align: center;
+    margin: 50px 0;
+  }
+
+  input,
+  textarea {
+    width: 90%;
+
+    margin: 10px auto;
+  }
+}
+
+@media screen and(max-width:835px) {
+  .nineth_input_holder,
+  .ninth_image {
+    width: 100%;
+  }
+}
+
+@media screen and(max-width:550px) {
+  .ninth_wrapper {
+    width: 100%;
+  }
+}

@@ -1,0 +1,73 @@
+.fifth_container {
+  display: flex;
+
+  .fifth_section_slider,
+  .fifth_section_img {
+    width: 50%;
+    height: 880px;
+  }
+}
+.fifth_section_img {
+  background-image: url(../../../asets/upperImg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: grayscale(100%);
+  position: relative;
+}
+.fifth_section_slider {
+  background: url(../../../asets/upperBlackNew.png);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fifth_one_slide {
+  width: 50%;
+  text-align: center;
+  background: url(../../../asets/circleText.png);
+  background-repeat: no-repeat;
+  background-size: 100% 70%;
+
+  p {
+    margin: 25px 0;
+  }
+  button {
+    margin: 25px 0;
+  }
+}
+
+.arrows {
+  img:first-child {
+    float: left;
+  }
+  img:last-child {
+    float: right;
+  }
+}
+.arrows::before,
+.arrows::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and(max-width:835px) {
+  .fifth_container {
+    flex-direction: column;
+
+    .fifth_section_slider,
+    .fifth_section_img {
+      width: 100%;
+      height: 880px;
+    }
+  }
+}
+
+@media screen and(max-width:450px) {
+  .fifth_one_slide {
+    width: 80%;
+  }
+}

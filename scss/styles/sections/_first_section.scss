@@ -1,0 +1,148 @@
+//first section container
+
+//defining height of divs in container
+.main_img,
+.main_headline {
+  height: 820px;
+}
+// main image background
+.main_img {
+  width: 30%;
+  background: url(../../../asets/newsLetterImg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+}
+
+.main_headline {
+  width: 70%;
+  background: url(../../../asets/Grunge_copy.png);
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template: "empty" "navBar" "banner";
+  grid-template-rows: [empty] 90px [navBar]80px [banner]1fr;
+}
+
+.empty {
+  grid-area: empty;
+}
+
+.navBar {
+  grid-area: navBar;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+}
+
+.logo {
+  width: 30%;
+  text-align: center;
+  img {
+    height: 80px;
+  }
+}
+
+.links {
+  width: 70%;
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    li {
+      height: 40px;
+      width: 20%;
+      text-align: center;
+      display: table;
+      a {
+        display: table-cell;
+        vertical-align: middle;
+        text-transform: uppercase;
+      }
+      a:hover {
+        font-size: $links_font_size * 1.1;
+        color: $main_purple_color;
+      }
+    }
+  }
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  padding: $main_banner_padding;
+  position: relative;
+  align-items: center;
+}
+
+.banner div:first-child {
+  img {
+    width: 120%;
+  }
+}
+.banner div:nth-child(even) {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  img {
+    width: 130%;
+  }
+}
+
+.banner div:last-child {
+  text-align: center;
+  width: 50%;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1150px) {
+  .banner div:last-child {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .container {
+    flex-direction: column;
+  }
+  .main_img,
+  .main_headline {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .main_headline {
+    display: block;
+  }
+  .container .main_headline {
+    height: auto;
+  }
+  .navBar {
+    flex-direction: column;
+    height: auto;
+    margin-top: 50px;
+  }
+  .links {
+    width: 100%;
+  }
+  .banner {
+    div:first-child {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .banner div:nth-child(even) {
+    position: unset;
+    order: 3;
+  }
+}
+@media screen and (max-width: 425px) {
+  .links {
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

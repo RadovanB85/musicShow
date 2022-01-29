@@ -1,0 +1,164 @@
+.fourth_first_container {
+  display: flex;
+  div {
+    height: 270px;
+  }
+  .center_background {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  div:first-child {
+    width: 30%;
+    background: url(../../../asets/sectionImage.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  div:last-child {
+    width: 70%;
+    background: linear-gradient(
+        to right,
+        rgba(197, 148, 239, 0.5),
+        rgba(197, 148, 239, 0.5)
+      ),
+      url(../asets/hartParty.png) no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+@media screen and(max-width: 835px) {
+  .fourth_first_container {
+    flex-direction: column;
+    div:first-child,
+    div:last-child {
+      width: 100%;
+    }
+  }
+}
+
+.fourth_second_container {
+  height: 860px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  background: linear-gradient(
+      to right,
+      rgba(197, 148, 239, 0.5) 30%,
+      rgb(244, 244, 244) 30% 100%
+    ),
+    url(../../../asets/sectionImage3.png) center;
+  background-size: 100% 100%, 40% 100%;
+
+  img {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.fourth_holder {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  width: 80%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.fourth_headline {
+  h1 {
+    display: inline-block;
+    background: url(../../../asets/underLine.png) no-repeat bottom right;
+    background-size: 65%;
+    margin: 0 auto;
+    font-size: 90px;
+  }
+}
+
+.fourth_paragraph {
+  text-align: justify;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
+  div {
+    width: 40%;
+    font-weight: bold;
+  }
+}
+
+.fourth_highlits_img {
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+  margin-top: 150px;
+  div {
+    width: 400px;
+    height: 210px;
+  }
+  div:first-child {
+    background: no-repeat url(../../../asets/ticketImg.png);
+    background-size: cover;
+    filter: grayscale(100%);
+  }
+  div:nth-child(even) {
+    background: no-repeat url(../../../asets/ticketImg2.png);
+    background-size: 100% 100%;
+    background-position: center;
+    filter: grayscale(100%);
+  }
+  div:last-child {
+    background: no-repeat url(../../../asets/ticketImg3.png);
+    background-size: 100% 100%;
+    background-position: center;
+
+    filter: grayscale(100%);
+  }
+  div:last-child {
+    background: no-repeat url(../../../asets/ticketImg3.png);
+    background-size: 100% 100%;
+    background-position: center;
+    filter: grayscale(100%);
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .fourth_highlits_img {
+    justify-content: space-between;
+  }
+}
+
+@media screen and(max-width:1000px) {
+  .fourth_paragraph {
+    flex-direction: column;
+    div {
+      text-align: right;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and(max-width:900px) {
+  .fourth_highlits_img {
+    margin-top: 100px;
+  }
+}
+@media screen and(max-width:710px) {
+  .fourth_second_container {
+    height: auto;
+  }
+  .fourth_headline {
+    width: 100%;
+  }
+  .fourth_holder {
+    width: 100%;
+  }
+  .fourth_highlits_img {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 15px;
+  }
+  .fourth_highlits_img {
+    div {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}

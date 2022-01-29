@@ -1,0 +1,73 @@
+.eight_container {
+  height: 880px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../../asets/Paper_Tear_new.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.eight_one_slide {
+  width: 600px;
+  height: 500px;
+  margin: 100px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  background-image: url(../../../asets/underLine.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 50px;
+  h1 {
+    margin-bottom: 70px;
+  }
+  p {
+    font-weight: bold;
+  }
+}
+
+.eight_img {
+  width: 100px;
+  background-color: $main_purple_background;
+  background-image: url(../../../asets/Starnew.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+}
+
+@media screen and(max-width:800px) {
+  .eight_container {
+    flex-direction: column;
+  }
+  .arrow_right {
+    order: 2;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+  .arrow_left {
+    order: 1;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+  .eight_one_slide {
+    order: 3;
+  }
+}
+
+@media screen and(max-width: 610px) {
+  .eight_one_slide {
+    width: 100%;
+  }
+}

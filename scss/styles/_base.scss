@@ -1,0 +1,70 @@
+@use "sass:math";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-family: $paragraph_font_family;
+  text-transform: uppercase;
+  color: white;
+  font-size: $main_font_size * 1.1;
+  padding: $h2_main_padding;
+}
+p {
+  font-family: $paragraph_font_family;
+  font-size: $main_font_size;
+
+  padding: 15px;
+}
+
+body {
+  background-color: $main_background_color;
+  min-width: 370px;
+}
+
+.container {
+  display: flex;
+}
+
+a {
+  font-family: $paragraph_font_family;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: $links_font_size;
+  font-weight: bold;
+  color: $main_black_colors;
+}
+
+.container_center {
+  display: flex;
+  justify-content: center;
+}
+
+input,
+textarea {
+  background: transparent;
+  text-transform: uppercase;
+  font-family: $paragraph_font_family;
+  border-color: $main_background_color;
+  border-width: $main_border_tickness;
+  border-radius: $main_border_radius;
+  padding: $main_padding;
+  padding-left: $input_paddin_left;
+  font-weight: bold;
+  color: $main_background_color;
+  border-top: $main_background_color;
+  border-left: $main_background_color;
+  &[type="submit"] {
+    background-color: ($main_background_color);
+    color: $main_purple_background;
+    &:hover {
+      background-color: darken($main_background_color, 4);
+    }
+  }
+  &::placeholder {
+    color: $main_background_color;
+    font-family: $paragraph_font_family;
+    font-size: $main_font_size;
+  }
+}

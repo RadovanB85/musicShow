@@ -1,0 +1,23 @@
+// variables and functions
+@import "./styles/variables";
+
+// base styles
+@import "./styles/base";
+
+//colors
+@import "./styles/_colors_variation";
+
+// components
+@import "./styles/_button";
+
+//sections
+@import "./styles/./sections/first_section";
+@import "./styles/./sections/second_section";
+@import "./styles/./sections/third_section";
+@import "./styles/sections/fourth_section";
+@import "./styles/sections/fifth_section";
+@import "./styles/sections/sixth_section";
+@import "./styles/sections/seventh_section";
+@import "./styles/sections/eight_section";
+@import "./styles/sections/ninth_section";
+@import "./styles/sections/footer_section";
